@@ -1,5 +1,6 @@
 ﻿// === Задача 2 ===
 // Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+
 /*
 Console.Clear();
 Console.WriteLine("The program that shows the grater number of two numbers.");
@@ -19,6 +20,7 @@ if (number1 < number2)
 
 // === Задача 4 ===
 // Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+
 /*
 Console.Clear();
 Console.WriteLine("The program that shows the grater number of three numbers.");
@@ -39,4 +41,19 @@ while (count < 3)
     count++; 
 }
 Console.Write($"The greater number is: {g_number}");
+*/
+
+// === Задача 6 ===
+// Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+/*
+Console.Clear();
+Console.WriteLine("The program that shows the digit is odd or even.");
+Console.WriteLine(" ");
+Console.Write("Input the number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number % 2 == 0)
+    Console.Write($"The number {number} is even.");
+else
+    Console.Write($"The number {number} is odd.");
 */

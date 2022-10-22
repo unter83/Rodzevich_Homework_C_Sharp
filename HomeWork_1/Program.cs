@@ -57,3 +57,24 @@ if (number % 2 == 0)
 else
     Console.Write($"The number {number} is odd.");
 */
+
+// === Задача 8 ===
+//  Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+
+Console.Clear();
+Console.WriteLine("The program that shows all even digit from 1 to the number.");
+Console.WriteLine(" ");
+Console.Write("Input the number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int count = 2;
+while (count <= number)
+{   
+    if (count % 2 == 0)
+    {
+        Console.Write(count);
+        if (count != number && count != number-1)
+            Console.Write(", ");               
+    }
+    count++;
+}

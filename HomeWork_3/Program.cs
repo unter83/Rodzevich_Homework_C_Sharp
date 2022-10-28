@@ -28,6 +28,7 @@ else
 // === Задача 21 ===
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
+/*
 Console.Clear();
 
 double Delta(int[] va, int[] vb)
@@ -61,3 +62,29 @@ for (int i = 0; i < 3; i++)
  }
  
 Console.WriteLine ($"The distance between the first point ({va[0]}, {va[1]}, {va[2]}) and the second point({vb[0]}, {vb[1]}, {vb[2]}) is {Delta(va, vb)}");
+*/
+
+// === Задача 23 ===
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+
+
+Console.Clear();
+
+Console.WriteLine("The program that shows tables of cubes from 1 to N");
+Console.WriteLine();
+
+void cube_Array(int num)
+{
+    
+    for (int i = 1; i <= num; i++)
+    {
+        Console.Write(Math.Pow(i, 3) + " ");
+        if (i % 6 == 0)
+           Console.WriteLine(); 
+    }
+}
+
+Console.Write("Input N:");
+int num = Convert.ToInt32(Console.ReadLine());
+cube_Array(num);

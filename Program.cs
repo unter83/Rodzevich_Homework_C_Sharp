@@ -93,6 +93,7 @@ Console.Clear();
 int[] Array = new int[100];
 
 for (int i = 0; i < 100; i++)
+
     Array[i] = new Random().Next(0, 100);
    
 for (int i = 0; i < 100; i++)
@@ -106,14 +107,16 @@ int max = Array[0], max2 = Array[0];
 for (int i = 0; i < 100; i++)
     if (Array[i] > max)
     {
+        if (max > max2)
+            max2 = max; 
         max = Array[i];
     }
-
+/*
 for (int i = 0; i < 100; i++)
   if (Array[i] > max2 && Array[i] != max)
   {
     max2 = Array[i];
-  }
+  }*/
 Console.WriteLine();
 Console.WriteLine();
 

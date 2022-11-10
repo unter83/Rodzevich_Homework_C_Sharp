@@ -61,6 +61,7 @@ else
 // === Задача 8 ===
 //  Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 
+/*
 
 Console.Clear();
 Console.WriteLine("The program that shows all even digit from 1 to the number.");
@@ -78,3 +79,7 @@ while (count <= number)
     }
     count++;
 }
+
+*/
+
+

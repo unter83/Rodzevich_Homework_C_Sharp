@@ -87,7 +87,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 cube_Array(num);
 
 */
-
+/*
 Console.Clear();
 
 int[] Array = new int[100];
@@ -116,7 +116,7 @@ for (int i = 0; i < 100; i++)
   if (Array[i] > max2 && Array[i] != max)
   {
     max2 = Array[i];
-  }*/
+  }
 Console.WriteLine();
 Console.WriteLine();
 
@@ -139,6 +139,51 @@ for (int i = 0; i < 100; i++)
                 Console.Write(Array[i] + " ");
     if ((i + 1) % 10 == 0) Console.WriteLine();
 }
-
+*/
 //Console.WriteLine(max);
 //Console.WriteLine(max2);
+
+// === Задача 19 ===
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+
+Console.Clear();
+
+Console.WriteLine("The program that shows is the 5-digit number is palindrome.");
+Console.WriteLine();
+
+bool IsPalindrome(int number)
+{
+    int dozen = 1, capacity = 0;
+
+    while (Math.Abs(number / dozen) >= 1)
+    {
+        dozen = dozen * 10;
+        capacity++;
+    //   Console.WriteLine(dozen);
+    }
+
+    int digit = 0, digit2 = 0, count = 0, ten2 = 1;
+    while (count < capacity / 2)
+    {
+        digit = (number / (dozen / (ten2 * 10))) % 10; // выделяем левую крайнюю цифру
+        digit2 = (number % (ten2 * 10)) / ten2; // выделяем правую крайнюю цифру
+
+        if (digit != digit2)
+          return false;
+         count++;
+        ten2 = ten2 * 10;
+    }
+    return true;
+    // if ((number / 10000 == number % 10) && ((number / 1000) % 10 == (number % 100) / 10))
+    //      Console.Write(number + " is palindrome");
+    // else
+    //     Console.Write(number + " is not palindrome");
+}
+
+Console.Write("Input the number: ");
+//int number = -12;
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+Console.WriteLine(IsPalindrome(number));
+
